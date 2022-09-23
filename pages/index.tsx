@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import About from '../components/About'
 import ContactMe from '../components/ContactMe'
 import Experiences from '../components/Experiences'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import HomeButton from '../components/HomeButton'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 
@@ -15,7 +17,7 @@ const Home: NextPage = () => {
         <title>João Welber Web Portfolio</title>
       </Head>
 
-    
+
       <Header />
 
       <section id="hero" className="snap-start">
@@ -26,7 +28,7 @@ const Home: NextPage = () => {
         <About />
       </section>
 
-     
+
       <section id="experience" className="snap-center">
         <Experiences />
       </section>
@@ -42,6 +44,8 @@ const Home: NextPage = () => {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+
+      <HomeButton />
     </div>
   )
 }
