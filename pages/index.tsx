@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 import About from '../components/About'
 import ContactMe from '../components/ContactMe'
@@ -31,7 +31,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
       </Head>
 
 
-      <Header />
+      <Header socials = {socials}/>
 
       <section id="hero" className="snap-start">
         <Hero />
