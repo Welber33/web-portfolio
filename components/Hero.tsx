@@ -1,16 +1,10 @@
 import Link from 'next/link';
 import React from 'react'
-import { Cursor, useTypewriter } from "react-simple-typewriter"
+import { Typewriter, Cursor } from "react-simple-typewriter/dist"
 import BackgroundCircles from './BackgroundCircles';
 
 
-export default function Hero() {
-  const [text, count] = useTypewriter({
-    words: ["Hi, The Name's João Welber", "Guy-who-loves-coffee.tsx", "<ButLovesToCodeMore />"],
-    loop: true,
-    delaySpeed: 2000,
-  });
-
+function Hero() {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
@@ -26,7 +20,13 @@ export default function Hero() {
           Front-end Developer
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold scroll-px-10">
-          <span className="mr-3">{text}</span>
+          <span className="mr-3">
+            <Typewriter
+              words={["Hi, The Name's João Welber", "Guy-who-loves-coffee.tsx", "<ButLovesToCodeMore />"]}
+              loop={true}
+              delaySpeed={2000}
+            />
+          </span>
           <Cursor cursorColor="#8e03ce" />
         </h1>
 
@@ -50,3 +50,4 @@ export default function Hero() {
     </div>
   )
 }
+export default Hero;

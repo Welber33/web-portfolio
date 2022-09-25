@@ -11,7 +11,7 @@ type Inputs = {
 
 type Props = {}
 
-export default function ContactMe({ }: Props) {
+function ContactMe({ }: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = formData => {
     window.location.href = `mailto:jwwork21gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. 
@@ -89,3 +89,4 @@ export default function ContactMe({ }: Props) {
     </div>
   )
 }
+export default ContactMe;

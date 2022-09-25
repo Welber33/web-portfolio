@@ -4,7 +4,7 @@ import Skill from './Skill'
 
 type Props = {}
 
-export default function Skills({}: Props) {
+function Skills({}: Props) {
   return (
     <motion.div 
       initial = {{ opacity: 0 }}
@@ -39,3 +39,4 @@ export default function Skills({}: Props) {
     </motion.div>
   )
 }
+export default Skills;

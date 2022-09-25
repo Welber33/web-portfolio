@@ -4,7 +4,7 @@ import ExperienceCard from './ExperienceCard'
 
 type Props = {}
 
-export default function Experiences({}: Props) {
+function Experiences({}: Props) {
   return (
     <motion.div 
       initial = {{ opacity: 0 }}
@@ -24,3 +24,4 @@ export default function Experiences({}: Props) {
     </motion.div>
   )
 }
+export default Experiences;

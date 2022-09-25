@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 type Props = {}
 
-export default function Projects({ }: Props) {
+function Projects({ }: Props) {
   const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div 
@@ -47,3 +47,4 @@ export default function Projects({ }: Props) {
     </motion.div>
   )
 }
+export default Projects;
