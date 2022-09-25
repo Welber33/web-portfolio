@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-function About({ }: Props) {
+function About({ pageInfo }: Props) {
   return (
     <motion.div 
       initial = {{ opacity: 0 }}
@@ -24,7 +28,7 @@ function About({ }: Props) {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src="https://avatars.githubusercontent.com/u/44277956?v=4"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="mt-[80px] -mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[350px] xl:h-[450px]"
       />
 
@@ -36,9 +40,7 @@ function About({ }: Props) {
         </h4>
 
         <p className="text-base text-justify">
-          I'm João Welber, recently graduated in computer science by Wyden Educacional Institute. I’m currently working on personal projects and acquiring some technical knowledgement on Figma, nextJs, tailwindCSS, more about react hooks and styled components, docker and kubernetes and microfrontends.
-          I’m looking to collaborate on the community sharing knowledge, talking about frontend development. At the moment i am looking for help with getting a frontend developer job
-          Feel free to ask me about React, Next, Styled Components,TailwindCSS, Typescript, HTML, CSS, Javascript, Vercel, Docker, Kubernetes, a little of Java Spring Boot, etc. and i will try to give you the best answer i can.
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>
