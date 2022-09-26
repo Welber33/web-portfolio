@@ -11,7 +11,7 @@ type Props = {
 
 function Hero({ pageInfo }: Props) {
   return (
-    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-auto">
       <BackgroundCircles />
 
       <img
