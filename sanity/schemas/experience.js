@@ -4,6 +4,11 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'companyName',
+      title: 'CompanyName',
+      type: 'string',
+    },
+    {
       name: 'jobTitle',
       title: 'JobTitle',
       type: 'string',
